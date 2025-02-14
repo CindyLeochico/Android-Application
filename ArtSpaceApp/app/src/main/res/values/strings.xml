@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ArtSpaceApp</string>
+    <string name="art_title_1">Starry Night</string>
+    <string name="art_title_2">Mona Lisa</string>
+    <string name="art_title_3">The Persistence of Memory</string>
+    <string name="artist_1">Vincent van Gogh</string>
+    <string name="artist_2">Leonardo da Vinci</string>
+    <string name="artist_3">Salvador Dalí</string>
+</resources>
