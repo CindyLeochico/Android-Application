@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">ThirtyDaysApp</string>
+    <string name="tip1">Day 1: Stay consistent and build positive habits every day.</string>
+    <string name="tip2">Day 2: Believe in your potential to achieve great things.</string>
+    <string name="tip3">Day 3: Each day is an opportunity to improve and grow.</string>
+    <string name="tip4">Day 4: Embrace challenges as valuable learning experiences.</string>
+    <string name="tip5">Day 5: Gratitude brings positivity into your life.</string>
+    <string name="tip6">Day 6: Good things are on their way to you.</string>
+    <string name="tip7">Day 7: Every day brings new opportunities for growth.</string>
+    <string name="tip8">Day 8: Trust your intuition and follow your passions.</string>
+    <string name="tip9">Day 9: Patience will guide you to success in the right time.</string>
+    <string name="tip10">Day 10: Be present and make the most of every moment today.</string>
+    <string name="tip11">Day 11: Focus on progress, not perfection.</string>
+    <string name="tip12">Day 12: Surround yourself with positive influences.</string>
+    <string name="tip13">Day 13: Challenge yourself to step outside your comfort zone.</string>
+    <string name="tip14">Day 14: Celebrate the small wins along the way.</string>
+    <string name="tip15">Day 15: Take time to rest and recharge when needed.</string>
+    <string name="tip16">Day 16: Practice mindfulness to stay focused in the present moment.</string>
+    <string name="tip17">Day 17: Set clear goals and take action every day to achieve them.</string>
+    <string name="tip18">Day 18: Learn something new every day to expand your knowledge.</string>
+    <string name="tip19">Day 19: Avoid comparing yourself to others; your journey is unique.</string>
+    <string name="tip20">Day 20: Believe in the process and trust your growth over time.</string>
+    <string name="tip21">Day 21: Take responsibility for your actions and choices.</string>
+    <string name="tip22">Day 22: Push through adversity with a positive mindset.</string>
+    <string name="tip23">Day 23: Cultivate a growth mindset by seeing challenges as opportunities.</string>
+    <string name="tip24">Day 24: Develop a daily routine that sets you up for success.</string>
+    <string name="tip25">Day 25: Take care of your body with healthy eating and regular exercise.</string>
+    <string name="tip26">Day 26: Stay organized and prioritize tasks to reduce stress.</string>
+    <string name="tip27">Day 27: Find balance in your life by managing your time effectively.</string>
+    <string name="tip28">Day 28: Forgive yourself and others to create peace in your heart.</string>
+    <string name="tip29">Day 29: Focus on what you can control and let go of what you can\'t.</string>
+    <string name="tip30">Day 30: Stay positive and keep moving forward, no matter the obstacles.</string>
+</resources>
