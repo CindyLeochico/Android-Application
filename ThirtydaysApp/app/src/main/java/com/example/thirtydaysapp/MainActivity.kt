@@ -13,6 +13,9 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.graphicsLayer
@@ -73,20 +76,30 @@ fun ThirtyDaysApp() {
 
 @Composable
 fun TipCard(tip: Tip, modifier: Modifier = Modifier) {
+    val cardAlpha by animateFloatAsState(
+        targetValue = 1f,
+        animationSpec = tween(durationMillis = 500)
+    )
+    val cardScale by animateFloatAsState(
+        targetValue = 1.05f,
+        animationSpec = tween(durationMillis = 500)
+    )
 
-    val cardAlpha by animateFloatAsState(targetValue = 1f,
-        animationSpec = tween(durationMillis = 500))
-    val cardScale by animateFloatAsState(targetValue = 1.05f,
-        animationSpec = tween(durationMillis = 500))
+    val textOffsetY by animateDpAsState(
+        targetValue = 0.dp,
+        animationSpec = tween(durationMillis = 500)
+    )
 
+    val imageAlpha by animateFloatAsState(
+        targetValue = 1f,
+        animationSpec = tween(durationMillis = 700)
+    )
 
-    val textOffsetY by animateDpAsState(targetValue = 0.dp,
-        animationSpec = tween(durationMillis = 500))
-
-    val imageAlpha by animateFloatAsState(targetValue = 1f,
-        animationSpec = tween(durationMillis = 700))
+    // Add state to track expansion
+    var expanded by remember { mutableStateOf(false) }
 
     Card(
+        onClick = { expanded = !expanded }, // Toggle expansion on click
         modifier = modifier
             .graphicsLayer(
                 scaleX = cardScale,
@@ -96,9 +109,17 @@ fun TipCard(tip: Tip, modifier: Modifier = Modifier) {
     ) {
         Column {
             AnimatedVisibility(
-                visible = true,
-                enter = slideInVertically(initialOffsetY = { it }) + fadeIn(),
-                exit = slideOutVertically(targetOffsetY = { it }) + fadeOut()
+                visible = expanded,
+                enter = fadeIn(animationSpec = tween(500)) +
+                        slideInVertically(
+                            initialOffsetY = { it / 2 },
+                            animationSpec = tween(500)
+                        ),
+                exit = fadeOut(animationSpec = tween(300)) +
+                        slideOutVertically(
+                            targetOffsetY = { it / 2 },
+                            animationSpec = tween(300)
+                        )
             ) {
                 Image(
                     painter = painterResource(tip.imageResourceId),
@@ -121,6 +142,7 @@ fun TipCard(tip: Tip, modifier: Modifier = Modifier) {
         }
     }
 }
+
 
 @Composable
 fun TipList(tipList: List<Tip>) {
